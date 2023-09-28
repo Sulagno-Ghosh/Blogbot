@@ -50,7 +50,7 @@ export default withApiAuthRequired (async function handler(req, res) {
   });
   
 
-  const parsed = JSON.parse(response.data.choices[0]?.text)
+  const parsed = JSON.parse(response.data.choices[0]?.text.split('\n').join(''))
 
   const post = await db.collection("posts").insertOne({
 
@@ -61,10 +61,19 @@ export default withApiAuthRequired (async function handler(req, res) {
     keywords,
     userId: userProfile._id,
     created: new Date(),
-  })
+  });
 
-  res.status(200).json({
-    post: JSON.parse(response.data.choices[0]?.text)
+  console.log("Post: ",post)
+  
+  
+    res.status(200).json({
+      postId: post.insertedId,
+
+    });
+
+
+
   })
   
-})
+  
+
