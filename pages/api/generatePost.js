@@ -5,10 +5,6 @@ import clientPromise from "../../lib/mongodb";
 
 
 
-export const config = {
-  runtime : "edge",
-};
-
 
 export default withApiAuthRequired (async function handler(req, res) {
   
