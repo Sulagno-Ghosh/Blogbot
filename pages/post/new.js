@@ -26,11 +26,7 @@ export default function NewPost(props) {
     console.log("Result", json);
     if(json?.postId){
         router.push(`/post/${json.postId}`)
-    }
-
-
-   
-    
+    }    
   };
 
   return (

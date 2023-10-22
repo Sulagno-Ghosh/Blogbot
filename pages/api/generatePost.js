@@ -21,6 +21,7 @@ export default withApiAuthRequired (async function handler(req, res) {
     res.status(403);
     return;
   }
+
   
   
   const config = new Configuration({
@@ -32,7 +33,7 @@ export default withApiAuthRequired (async function handler(req, res) {
   const {topic, keywords} = req.body;
 
   const response = await openai.createCompletion({
-    model: "text-davinci-003",
+    model: 'gpt-3.5-turbo',
     temperature: 0.1,
     max_tokens: 3600,
     prompt: `Write a long and detailed SEO-friendly blog post about ${topic}, that targets the following comma-seperated keywords ${keywords}. 
