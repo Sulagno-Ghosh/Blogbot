@@ -7,7 +7,7 @@ import clientPromise from "../../lib/mongodb";
 
 
 export default withApiAuthRequired (async function handler(req, res) {
-  const openai = new OpenAI({ apiKey: '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' });
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY});
   const{user} = await getSession(req,res);
   const client = await clientPromise;
   const db = client.db("BlogStandard");
