@@ -1,5 +1,5 @@
 {
-    "api/generatePost.js":{
+    "api/*.js":{
         "maxDuration": 120
     }
 }
