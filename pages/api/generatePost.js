@@ -1,13 +1,17 @@
-import OpenAI from "openai";
+const OpenAI = require('openai');
+
 import { getSession, withApiAuthRequired} from "@auth0/nextjs-auth0";
 import clientPromise from "../../lib/mongodb";
 
 
 
-
-
 export default withApiAuthRequired (async function handler(req, res) {
-  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY});
+  
+
+  const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY, // defaults to process.env["OPENAI_API_KEY"]
+  });
+  
   const{user} = await getSession(req,res);
   const client = await clientPromise;
   const db = client.db("BlogStandard");
