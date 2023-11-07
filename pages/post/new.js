@@ -13,7 +13,6 @@ export default function NewPost(props) {
   
 
   const handleSubmit = async (e) => {
-
     e.preventDefault();
     const response = await fetch("/api/generatePost", {
       method: "POST",
@@ -26,11 +25,7 @@ export default function NewPost(props) {
     console.log("Result", json);
     if(json?.postId){
         router.push(`/post/${json.postId}`)
-    }
-
-
-   
-    
+    }    
   };
 
   return (
