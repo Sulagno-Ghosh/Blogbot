@@ -34,4 +34,5 @@ Welcome to Blogbot, the ultimate full-stack application designed for seamless an
 
 In the **new age of AI**, it is really good to leverage the power and get an amazing template for your article. Surely the articles are great but it still requires a lot of human touch to make them perfect but this tool helps them get that Draft-1 and start their journey from there.
 
+![Final](image3.png)
 
