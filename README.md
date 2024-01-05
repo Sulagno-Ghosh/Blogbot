@@ -15,6 +15,7 @@ Welcome to Blogbot, the ultimate full-stack application designed for seamless an
 - **User-Friendly Dashboard**: Manage your blog, view analytics, and create content effortlessly with an intuitive user interface.
 
 ## Getting Started
+![Web app](image2.png)
 
 1. **Clone the Repository**
    ```bash
